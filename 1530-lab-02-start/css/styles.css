@@ -49,7 +49,8 @@ h2 {
 
 .navbar {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
     align-items: center;
     background-color: #20abad;
     padding: 1rem;
@@ -153,10 +154,7 @@ button:hover {
 
     .navbar {
         align-items: flex-start;
-    }
-
-    .navbar .logo {
-        align-self: center;
+        justify-content: flex-start;
     }
 
     .navbar .menu{
