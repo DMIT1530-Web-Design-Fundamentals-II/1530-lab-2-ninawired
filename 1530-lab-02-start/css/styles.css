@@ -16,16 +16,190 @@ font-family: 'Pacifico', cursive;
 
 /* UNIVERSAL STYLES */
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo,
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #eeeaeb;
+}
+
+.navbar h2 {
+    display: none;
+}
+
+.logo {
+    font-size: 2rem;
+    background-color: #20abad;
+    text-align: center;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.icon {
+    width: 0.8rem;
+    height: auto;
+    fill: #eeeaeb;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #20abad;
+    padding: 1rem;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar .menu {
+    max-width: 80%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .menu > li {
+    position: relative;
+    text-transform: uppercase;
+    color: #eeeaeb;
+}
+
+.navbar a {
+    color: #eeeaeb;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #20abad;
+    display: none;
+}
+
+.navbar .submenu a {
+    text-decoration: none;
+}
+
+
+.navbar li:focus-within>ul,
+.navbar li:hover>ul {
+    display: block;
+}
+
+.hero {
+    position: relative;
+    background-image: url("../img/grapefruit-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+}
+
+.hero-container {
+    height: 100vh;
+    width: 710px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.hero-content h2, p {
+    color: white;
+}
+
+
+button {
+    background-color: #20abad;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #20abad;
+    color: #eeeaeb;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: #007c84;
+    border-color: #007c84;
+}
+
 
 /* MOBILE VIEW */
 
+@media (max-width: 719px) {
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        align-self: center;
+    }
+
+    .navbar .menu{
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar .submenu {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .icon {
+        visibility: hidden;
+    }
+
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+                       rgba(0, 0, 0, 0.4)), url("../img/grapefruit-bg.jpg");
+        background-position: left;
+    } 
+}
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
 
+    .navbar .menu {
+        gap: 4rem;
+    }
+
+    .hero-content {
+        position: absolute;
+        left: 45%;
+    }        
 }
 
-/* LARGEST VIEW */
-@media screen and (min-width: 1024px) {
     
+/* LARGEST VIEW */
+
+@media screen and (min-width: 1024px) {
+
+/* Unsure what else I could do as I have it contained already. */
+
 }
